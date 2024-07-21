@@ -30,7 +30,7 @@ body{
 
 #app h1{
     text-align: center;
-    counter-reset: rgb(246,142,15);
+    color: rgb(246,142,15);
 }
 
 #addTaskButton{
@@ -50,5 +50,111 @@ body{
 }
 
 #taskList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#taskList li{
+    padding: 10px;
+    border-bottom: 1px solid #eee;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskList li span{
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.task-button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-button .todo {
+    background-color: #f74606;
+    color: #fff;
+}
+
+.task-button .todo :hover {
+    background-color: #f58560;
+}
+
+.task-button .done {
+    background-color: #66f70b;
+    color: #fff;
+}
+
+.task-button .done:hover {
+    background-color: #acf77d;
+}
+
+#taskList li:nth-child(odd){
+    background-color: #f9f9f9;
+}
+
+
+#taskList button {
+    background-color: #4caf50;
+    /* color: white; */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#taskList button:hover{
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+@media(max-width: 600px){
+    #app{
+        padding: 15px;
+    }
+
+    #addTaskButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #taskInput{
+        padding: 8px;
+    }
+
+    #taskList li{
+        padding: 8px;
+    }
+}
+
+@media(max-width: 400px){
+    #app{
+        padding: 10px;
+    }
+
+    #addTaskButton {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    #taskInput{
+        padding: 6px;
+    }
+
+    #taskList li{
+        padding: 6px;
+    }
 }
